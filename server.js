@@ -6,13 +6,14 @@ const cors = require('cors');
 const app = express();
 const PORT = process.env.PORT || 5004;
 
-const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost/contact';
+const mongoURI = 'mongodb+srv://shivaprasadmakela:Shiva123@contact.mcx0acy.mongodb.net/?retryWrites=true&w=majority';
 mongoose.connect(mongoURI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
 
 const corsOptions = {
+  origin: 'http://localhost:3004',
   credentials: true,
 };
 
